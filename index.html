@@ -1465,37 +1465,36 @@
             updateDisplayInfo();
         }
 
-        function removeSymptom(button) {
-            const category = button.getAttribute('data-category');
-            const name = button.getAttribute('data-name');
+function removeSymptom(button) {
+    const category = button.getAttribute('data-category');
+    const name = button.getAttribute('data-name');
 
-            // active を外す
-            const buttons = document.querySelectorAll('.symptoms button');
-            buttons.forEach(btn => {
-                if (btn.textContent === name && btn.getAttribute('data-category') === category) {
-                    btn.classList.remove('active');
-                }
-            });
-
-            // selectedSymptom から削除
-            selectedSymptom = selectedSymptom.filter(item => !(item.category === category && item.name === name));
-
-            // 時間と価格を再計算
-            selectedMenuTime = 0;
-            menuPrice = 0;
-            selectedSymptom.forEach(item => {
-                selectedMenuTime += menuTimes[item.name] || 0;
-                const btn = [...document.querySelectorAll('.symptoms button')].find(
-                    b => b.textContent === item.name && b.getAttribute('data-category') === item.category
-                );
-                if (btn) {
-                    menuPrice += parseInt(btn.getAttribute('data-price'), 10) || 0;
-                }
-            });
-
-            updateSelectedMenusDisplay();
-            updateDisplayInfo();
+    // active を外す
+    const buttons = document.querySelectorAll('.symptoms button');
+    buttons.forEach(btn => {
+        if (btn.textContent === name && btn.getAttribute('data-category') === category) {
+            btn.classList.remove('active');
         }
+    });
+
+    // 🛠 修正ポイント：再構築
+    selectedSymptom = [];
+    selectedMenuTime = 0;
+    menuPrice = 0;
+
+    const updatedSelectedButtons = document.querySelectorAll('.symptoms button.active');
+    updatedSelectedButtons.forEach(btn => {
+        const category = btn.getAttribute('data-category');
+        const name = btn.textContent;
+        selectedSymptom.push({ category, name });
+        selectedMenuTime += menuTimes[name] || 0;
+        menuPrice += parseInt(btn.getAttribute('data-price'), 10) || 0;
+    });
+
+    // 表示更新
+    updateSelectedMenusDisplay();
+    updateDisplayInfo();
+}
 
         function updateSelectedMenusDisplay() {
             const selectedMenusDisplay = document.getElementById("selected-menus-display");
@@ -1610,7 +1609,7 @@
             document.getElementById("treatment-text").innerHTML = "";
 
             // メニューとオプションをリセット
-            selectedSymptom = '';      // メニューのリセット
+            selectedSymptom = [];      // メニューのリセット
             irradiationsCount = '';    // オプションのリセット
             menuPrice = 0;             // メニューの価格リセット
             optionsPrice = 0;          // オプションの価格リセット
