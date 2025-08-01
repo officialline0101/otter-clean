@@ -132,26 +132,26 @@
             text-indent: 20px;
             /* テキストを右に20pxずらす */
             position: relative;
-            overflow: hidden;
         }
 
-.labelhidariyose {
-    display: block;
-    margin-top: 10px; /* ← 追加 */
-    margin-bottom: 10px;
-    padding: 3px;
-    font-weight: 600;
-    background-color: #00b08b;
-    color: white;
-    border-radius: 6px;
-    font-size: 18px;
-    text-align: center;
-    /* 中央揃え */
-    text-indent: 0px;
-    /* テキストを右に20pxずらす */
-    position: relative;
-    overflow: hidden;
-}
+        .labelhidariyose {
+            display: block;
+            margin-top: 10px;
+            /* ← 追加 */
+            margin-bottom: 10px;
+            padding: 3px;
+            font-weight: 600;
+            background-color: #00b08b;
+            color: white;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+            /* 中央揃え */
+            text-indent: 0px;
+            /* テキストを右に20pxずらす */
+            position: relative;
+            overflow: hidden;
+        }
 
         .labelmessezi {
             display: block;
@@ -979,27 +979,39 @@
                 <span class="highlight-text">◆エアコンクリーニング◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="エアコンクリーニング" data-price="8800">壁掛けノーマルエアコン(¥8,800)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="エアコンクリーニング" data-price="16500">壁掛けお掃除機能付きエアコン(¥16,500)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="エアコンクリーニング" data-price="22000">天井埋め込み式エアコン(¥22,000)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="エアコンクリーニング" data-price="11000">壁掛け業務用エアコン(¥11,000)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="エアコンクリーニング" data-price="21000">高性能機種(¥21,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="エアコンクリーニング"
+                    data-price="8800">壁掛けノーマルエアコン(¥8,800)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="エアコンクリーニング"
+                    data-price="16500">壁掛けお掃除機能付きエアコン(¥16,500)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="エアコンクリーニング"
+                    data-price="22000">天井埋め込み式エアコン(¥22,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="エアコンクリーニング"
+                    data-price="11000">壁掛け業務用エアコン(¥11,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="エアコンクリーニング"
+                    data-price="21000">高性能機種(¥21,000)</button>
             </div>
 
-        <div class="labelhidariyose">型式番号</div>
-        <input type="tel" id="Modelnumber" placeholder="型式番号を入力してください">
+            <div class="labelhidariyose">エアコンの型式番号</div>
+            <input type="text" id="EakonModelnumber" placeholder="エアコンの型式番号を入力してください">
 
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
             </div>
             <div class="irradiations">
-                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="2200">防菌防カビコート(¥2,200)</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="2200">ドレンホース洗浄(¥2,200)</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="3300">室外機洗浄(¥3,300)</button>
-                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="2200">エコ洗剤(¥2,200)</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="550">防虫キャップ(¥550)</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="4400">（業務用）防菌防カビコート(¥4,400)</button>
-                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="4400">（業務用）防菌防カビコート(¥4,400)</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)"
+                    data-price="2200">防菌防カビコート(¥2,200)</button>
+                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)"
+                    data-price="2200">ドレンホース洗浄(¥2,200)</button>
+                <button type="button" id="sanirradiations" onclick="selectirradiations(this)"
+                    data-price="3300">室外機洗浄(¥3,300)</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)"
+                    data-price="2200">エコ洗剤(¥2,200)</button>
+                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)"
+                    data-price="550">防虫キャップ(¥550)</button>
+                <button type="button" id="sanirradiations" onclick="selectirradiations(this)"
+                    data-price="4400">（業務用）防菌防カビコート(¥4,400)</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)"
+                    data-price="4400">（業務用）防菌防カビコート(¥4,400)</button>
             </div>
         </div>
 
@@ -1008,31 +1020,51 @@
                 <span class="highlight-text">◆シェービングコース◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="シェービングコース" data-price="14300">キッチン(¥14,300)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="シェービングコース" data-price="14300">レンジフード(¥14,300)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="シェービングコース" data-price="15400">浴室(¥15,400)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="シェービングコース" data-price="8800">洗面所(¥8,800)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="シェービングコース" data-price="8800">トイレ(¥8,800)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="シェービングコース"
+                    data-price="14300">キッチン(¥14,300)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="シェービングコース"
+                    data-price="14300">レンジフード(¥14,300)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="シェービングコース"
+                    data-price="15400">浴室(¥15,400)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="シェービングコース"
+                    data-price="8800">洗面所(¥8,800)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="シェービングコース"
+                    data-price="8800">トイレ(¥8,800)</button>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
             </div>
             <div class="irradiations">
-                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="4400">食洗機(¥4,400)</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="4400">お魚グリル(¥4,400)</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="3300">電子レンジ(¥3,300)</button>
-                <button type="button" id="yonirradiations" onclick="selectirradiations(this)" data-price="5500">排水管高圧洗浄（キッチン）(¥5,500)</button>
-                <button type="button" id="goirradiations" onclick="selectirradiations(this)" data-price="5500">内部パーツ分解洗浄（レンジフード）(¥5,500)</button>
-                <button type="button" id="rokuirradiations" onclick="selectirradiations(this)" data-price="5500">浴室換気扇分解洗浄(¥5,500)</button>
-                <button type="button" id="sitiirradiations" onclick="selectirradiations(this)" data-price="3500">エプロン内高圧洗浄（浴室）(¥3,500)</button>
-                <button type="button" id="hatiirradiations" onclick="selectirradiations(this)" data-price="5500">鏡の鱗取り(¥5,500)</button>
-                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="5500">カビ防止コート（浴室）(¥5,500)</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="5500">排水管高圧洗浄（浴室）(¥5,500)</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="8800">風呂釜洗浄(¥8,800)</button>
-                <button type="button" id="yonirradiations" onclick="selectirradiations(this)" data-price="2200">イス・フタ・桶洗浄(¥2,200)</button>
-                <button type="button" id="goirradiations" onclick="selectirradiations(this)" data-price="5500">ブラインド（浴室）(¥5,500)</button>
-                <button type="button" id="rokuirradiations" onclick="selectirradiations(this)" data-price="4400">トイレタンク洗浄(¥4,400)</button>
-                <button type="button" id="sitiirradiations" onclick="selectirradiations(this)" data-price="3300">換気扇の分解洗浄（トイレ）(¥3,300)</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)"
+                    data-price="4400">食洗機(¥4,400)</button>
+                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)"
+                    data-price="4400">お魚グリル(¥4,400)</button>
+                <button type="button" id="sanirradiations" onclick="selectirradiations(this)"
+                    data-price="3300">電子レンジ(¥3,300)</button>
+                <button type="button" id="yonirradiations" onclick="selectirradiations(this)"
+                    data-price="5500">排水管高圧洗浄（キッチン）(¥5,500)</button>
+                <button type="button" id="goirradiations" onclick="selectirradiations(this)"
+                    data-price="5500">内部パーツ分解洗浄（レンジフード）(¥5,500)</button>
+                <button type="button" id="rokuirradiations" onclick="selectirradiations(this)"
+                    data-price="5500">浴室換気扇分解洗浄(¥5,500)</button>
+                <button type="button" id="sitiirradiations" onclick="selectirradiations(this)"
+                    data-price="3500">エプロン内高圧洗浄（浴室）(¥3,500)</button>
+                <button type="button" id="hatiirradiations" onclick="selectirradiations(this)"
+                    data-price="5500">鏡の鱗取り(¥5,500)</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)"
+                    data-price="5500">カビ防止コート（浴室）(¥5,500)</button>
+                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)"
+                    data-price="5500">排水管高圧洗浄（浴室）(¥5,500)</button>
+                <button type="button" id="sanirradiations" onclick="selectirradiations(this)"
+                    data-price="8800">風呂釜洗浄(¥8,800)</button>
+                <button type="button" id="yonirradiations" onclick="selectirradiations(this)"
+                    data-price="2200">イス・フタ・桶洗浄(¥2,200)</button>
+                <button type="button" id="goirradiations" onclick="selectirradiations(this)"
+                    data-price="5500">ブラインド（浴室）(¥5,500)</button>
+                <button type="button" id="rokuirradiations" onclick="selectirradiations(this)"
+                    data-price="4400">トイレタンク洗浄(¥4,400)</button>
+                <button type="button" id="sitiirradiations" onclick="selectirradiations(this)"
+                    data-price="3300">換気扇の分解洗浄（トイレ）(¥3,300)</button>
             </div>
         </div>
 
@@ -1041,17 +1073,27 @@
                 <span class="highlight-text">◆洗濯機クリーニング◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="マッサージコース" data-price="15000">縦型洗濯機(¥16,500)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="マッサージコース" data-price="15000">ドラム式洗濯機(¥33,000)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="マッサージコース" data-price="15000">縦型洗濯機（乾燥機能付き）(¥22,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="マッサージコース"
+                    data-price="15000">縦型洗濯機(¥16,500)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="マッサージコース"
+                    data-price="15000">ドラム式洗濯機(¥33,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="マッサージコース"
+                    data-price="15000">縦型洗濯機（乾燥機能付き）(¥22,000)</button>
             </div>
+
+            <div class="labelhidariyose">洗濯機の型式番号</div>
+            <input type="text" id="SentakukiModelnumber" placeholder="洗濯機の型式番号を入力してください">
+
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
             </div>
             <div class="irradiations">
-                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">ビートウォッシュ(¥5,500)（縦型）</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">排水管高圧洗浄(5,500)</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">洗濯パン(¥3,300)</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)"
+                    data-price="15000">ビートウォッシュ(¥5,500)（縦型）</button>
+                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)"
+                    data-price="15000">排水管高圧洗浄(5,500)</button>
+                <button type="button" id="sanirradiations" onclick="selectirradiations(this)"
+                    data-price="15000">洗濯パン(¥3,300)</button>
             </div>
         </div>
 
@@ -1175,26 +1217,66 @@
             });
         });
 
+        function formatDateTime(dateTimeString) {
+            const date = new Date(dateTimeString);
+
+            if (isNaN(date)) {
+                return '無効な日時です'; // 無効な日付の場合のエラーメッセージ
+            }
+
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1; // 月は0から始まるため+1
+            const day = date.getDate();
+            const hours = date.getHours();
+            const minutes = String(date.getMinutes()).padStart(2, '0'); // 分を2桁に整形
+
+            return `${year}年${month}月${day}日　${hours}時${minutes}分`;
+        }
+
         function updateDisplayInfo() {
             const name = document.getElementById('name').value;
-            const visitCountText = visitCount ? `<span style="color:#13ca5e;"><strong>【年齢】</strong></span><br>・${visitCount}` : '・年齢が未選択です';
+            const visitCountText = visitCount ? `・<span style="color:#13ca5e;"><strong>ご来店回数</strong></span>：${visitCount}` : '・来店回数が未選択です';
             const selectedMenuText = selectedMenu ? `<span style="color:#13ca5e;"><strong>【コース】</strong></span><br>・${selectedMenu}` : '・コースが未選択です';
 
+            // メニューが選択されていたら、各メニューを改行して表示
             const selectedSymptomText = selectedSymptom.length > 0
                 ? `<span style="color:#13ca5e;"><strong>【メニュー】</strong></span><br>・${selectedSymptom.map(item => `《${item.category}》${item.name}`).join('<br>・')}`
                 : '・メニューが未選択です';
 
+            // オプションが選択されていたら、各オプションを改行して表示
             const irradiationsText = irradiationsCount
-                ? `<span style="color:#13ca5e;"><strong>【オプション】</strong></span><br>・${irradiationsCount.split(', ').join('<br>・')}`
+                ? `<span style="color:#13ca5e;"><strong>【オプション】</strong></span><br>${irradiationsCount.split(', ').join('<br>')}`
                 : '・オプション無し';
 
+            // 所要時間を計算
             let totalMinutes = selectedMenuTime + selectedirradiationsTime + selectedVisitTime;
             let hours = Math.floor(totalMinutes / 60);
             let minutes = totalMinutes % 60;
-            let totalTimeText = `<span style="color:#13ca5e;"><strong>【所要時間】</strong></span><br>・${hours > 0 ? hours + '時間' : ''}${minutes}分`;
 
-            const totalAmountText = `<span style="color:#13ca5e;"><strong>【合計金額】</strong></span><br>・¥${menuPrice + optionsPrice}`;
-            const selectedDateText = selectedFullDate ? `<span style="color:#13ca5e;"><strong>【希望日時】</strong></span><br>・${selectedFullDate}` : '・日時が未選択です';
+            // 所要時間の表示形式：○○時間○○分
+            let totalTimeText = `・<span style="color:#13ca5e;"><strong>所要時間</strong></span>：${hours > 0 ? hours + '時間' : ''}${minutes}分`;
+
+            // 合計金額の表示
+            const totalAmountText = `・<span style="color:#13ca5e;"><strong>合計金額</strong></span>：¥${menuPrice + optionsPrice}`;
+
+            // 第1希望日が選択された場合の表示
+            const selectedDate1 = document.getElementById('date1').value;
+            const selectedDate1Text = selectedDate1
+                ? `・<span style="color:#13ca5e;"><strong>第1希望日</strong></span>：${formatDateTime(selectedDate1)}`
+                : '・第1希望日が未選択です';
+
+            // 第2希望日が選択された場合の表示
+            const selectedDate2 = document.getElementById('date2').value;
+            const selectedDate2Text = selectedDate2
+                ? `・<span style="color:#13ca5e;"><strong>第2希望日</strong></span>：${formatDateTime(selectedDate2)}`
+                : '・第2希望日が未選択です';
+
+            // 第3希望日が選択された場合の表示
+            const selectedDate3 = document.getElementById('date3').value;
+            const selectedDate3Text = selectedDate3
+                ? `・<span style="color:#13ca5e;"><strong>第3希望日</strong></span>：${formatDateTime(selectedDate3)}`
+                : '・第3希望日が未選択です';
+
 
             // 修正ボタン付きのHTMLを作成
             document.getElementById('displayInfo').innerHTML = `
@@ -1209,8 +1291,13 @@
         </div>
         <hr>
         <div class="info-row">
+            <p>${selectedMenuText}</p>
+            <button class="edit-button" onclick="scrollToElement('course')">修正する</button>
+        </div>
+        <hr>
+        <div class="info-row">
             <p>${selectedSymptomText}</p>
-            <button class="edit-button" onclick="scrollToElement('male'); scrollToElement('female'); scrollToElement('whitening');">修正する</button>
+            <button class="edit-button" onclick="scrollToElement('beautifuleyebrows'); scrollToElement('shinyskin'); scrollToElement('Cosmetologyasawhole');">修正する</button>
         </div>
         <hr>
         <div class="info-row">
@@ -1219,12 +1306,18 @@
         </div>
         <hr>
         <div class="info-row">
-            <p>${selectedDateText}</p>
-            <button class="edit-button" onclick="scrollToElement('calendar1')">修正する</button>
+            <p>${selectedDate1Text}</p>
+            <button class="edit-button" onclick="scrollToElement('date1')">修正する</button>
         </div>
         <hr>
         <div class="info-row">
-            <p>${totalAmountText}</p>
+            <p>${selectedDate2Text}</p>
+            <button class="edit-button" onclick="scrollToElement('date2')">修正する</button>
+        </div>
+        <hr>
+        <div class="info-row">
+            <p>${selectedDate3Text}</p>
+            <button class="edit-button" onclick="scrollToElement('date3')">修正する</button>
         </div>
         <hr>
     `;
@@ -1250,17 +1343,16 @@
             button.addEventListener('click', updateDisplayInfo);
         });
 
-        document.querySelectorAll('.symptoms button').forEach(button => {
-            button.addEventListener('click', () => {
-                const calendarContainer = document.querySelector('.calendar-container');
+        // 第一希望日、第二希望日、第三希望日でupdateDisplayInfoを呼び出す
+        document.getElementById('date1').addEventListener('change', updateDisplayInfo);
+        document.getElementById('date2').addEventListener('change', updateDisplayInfo);
+        document.getElementById('date3').addEventListener('change', updateDisplayInfo);
 
-                // 選択されたメニューがあればカレンダーを表示
-                if (document.querySelectorAll('.symptoms button.active').length > 0) {
-                    calendarContainer.style.display = 'block';
-                } else {
-                    // 選択が解除された場合、カレンダーを非表示
-                    calendarContainer.style.display = 'none';
-                }
+        // 日付セルのクリックイベントで希望日時を更新
+        document.querySelectorAll('.calendar td').forEach(cell => {
+            cell.addEventListener('click', () => {
+                selectDate(cell);
+                updateDisplayInfo();  // 日付を選択したら即座に表示を更新
             });
         });
 
@@ -1557,7 +1649,8 @@
             const formData = {
                 name: document.getElementById('name').value.trim(),
                 phone: document.getElementById('phone').value.trim(),
-                Modelnumber: document.getElementById('Modelnumber').value.trim(),
+                EakonModelnumber: document.getElementById('EakonModelnumber').value.trim(),
+                SentakukiModelnumber: document.getElementById('SentakukiModelnumber').value.trim(),
                 tellmetheaddress: document.getElementById('tellmetheaddress').value.trim(),
                 visitCount: visitCount,
                 selectedMenu: selectedMenu,
@@ -1612,23 +1705,27 @@
                 ? formData.selectedSymptom.map(item => `・${item.name}`).join('\n')
                 : 'メニュー未選択';
 
-const modelNumberText = formData.Modelnumber
-    ? `≪形式番号≫\n${formData.Modelnumber}\n`
-    : '';
+            const EakonmodelNumberText = formData.EakonModelnumber
+                ? `｟エアコン型式番号｠\n${formData.EakonModelnumber}\n`
+                : '';
 
-const irradiationsText = formData.irradiationsCount
-    ? `≪オプション≫\n${formData.irradiationsCount}\n`
-    : '';
+            const SentakukimodelNumberText = formData.SentakukiModelnumber
+                ? `｟洗濯機型式番号｠\n${formData.SentakukiModelnumber}\n`
+                : '';
 
-liff.sendMessages([{
-    type: 'text',
-    text: `【ご予約内容】\n\n≪お名前≫：${formData.name}\n\n≪電話番号≫：${formData.phone}\n\n≪住所≫：${formData.tellmetheaddress}\n\n≪来店回数≫：${formData.visitCount}\n\n≪メニュー≫\n${selectedSymptomText}\n${modelNumberText}\n${irradiationsText}\n【希望日時】\n≪第一希望日≫\n${formatDate(formData.dates[0])}\n\n≪第二希望日≫\n${formatDate(formData.dates[1])}\n\n≪第三希望日≫\n${formatDate(formData.dates[2])}\n≪メッセージ≫\n${formData.message}`
-}]).then(() => {
-    alert('当日キャンセルは無いようにお願いいたします。');
-    liff.closeWindow();
-}).catch((err) => {
-    console.error('メッセージの送信に失敗しました', err);
-});
+            const irradiationsText = formData.irradiationsCount
+                ? `≪オプション≫\n${formData.irradiationsCount}\n`
+                : '';
+
+            liff.sendMessages([{
+                type: 'text',
+                text: `【ご予約内容】\n\n≪お名前≫：${formData.name}\n\n≪電話番号≫：${formData.phone}\n\n≪住所≫：${formData.tellmetheaddress}\n\n≪来店回数≫：${formData.visitCount}\n\n≪メニュー≫\n${selectedSymptomText}${EakonmodelNumberText}${SentakukimodelNumberText}\n${irradiationsText}\n【希望日時】\n≪第一希望日≫\n${formatDate(formData.dates[0])}\n\n≪第二希望日≫\n${formatDate(formData.dates[1])}\n\n≪第三希望日≫\n${formatDate(formData.dates[2])}\n\n≪メッセージ≫\n${formData.message}`
+            }]).then(() => {
+                alert('当日キャンセルは無いようにお願いいたします。');
+                liff.closeWindow();
+            }).catch((err) => {
+                console.error('メッセージの送信に失敗しました', err);
+            });
         }
 
         function formatDate(datetime) {
