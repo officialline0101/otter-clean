@@ -255,6 +255,23 @@
             color: #fff;
         }
 
+.irradiations {
+  display: flex;
+  flex-direction: column;  /* 縦並び */
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: stretch;    /* ボタン幅を親にフィット */
+}
+
+.irradiations button {
+  flex: 0 0 auto;          
+  width: 100%;
+  white-space: normal;     
+  word-break: break-word;  
+  overflow-wrap: anywhere; 
+  text-align: center;      /* 中央揃え */
+}
+
         .date-inputs input[type="datetime-local"] {
             width: calc(100% - 22px);
             padding: 10px;
