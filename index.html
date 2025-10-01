@@ -15,7 +15,7 @@
             /* さらに右へ */
             top: 80%;
             /* 画面中央に固定 */
-            transform: translateY(-50%) translateX(13px);
+            transform: translateY(-50%) translateX(11px);
             /* 中央配置と右ずらし */
             background: #00b08b;
             display: flex;
@@ -967,6 +967,7 @@
             <button type="button" onclick="showMenu('male')">エアコンクリーニング</button>
             <button type="button" onclick="showMenu('female')">水回りクリーニング</button>
             <button type="button" onclick="showMenu('whitening')">洗濯機クリーニング</button>
+            <button type="button" onclick="showMenu('outimarugoto')">おうち丸ごとクリーニング</button>
         </div>
 
         <!-- メニュー表示エリア（選択されたメニュー名がここに出る） -->
@@ -1012,6 +1013,8 @@
                     data-price="4400">（業務用）防菌防カビコート(¥4,400)</button>
                 <button type="button" id="firstirradiations" onclick="selectirradiations(this)"
                     data-price="4400">（業務用）防菌防カビコート(¥4,400)</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)"
+                    data-price="4400">高所作業(2.5M以上)(¥3,300)</button>
             </div>
         </div>
 
@@ -1020,16 +1023,17 @@
                 <span class="highlight-text">◆水回りクリーニング◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング"
-                    data-price="14300">キッチン(¥14,300)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング"
-                    data-price="14300">レンジフード(¥14,300)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング"
-                    data-price="15400">浴室(¥15,400)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング"
-                    data-price="8800">洗面所(¥8,800)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング"
-                    data-price="8800">トイレ(¥8,800)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング" data-price="14300">キッチン(¥16,500)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング" data-price="14300">エプロン内高圧洗浄(¥3,300)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング" data-price="14300">レンジフード(¥16,500)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング" data-price="15400">浴室(¥18,700)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング" data-price="8800">洗面所(¥11,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング" data-price="8800">トイレ(¥11,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング" data-price="14300">【セット割】浴室+レンジフード(¥25,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング" data-price="14300">【セット割】キッチン+レンジフード<br>+浴室+トイレ(¥35,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング" data-price="15400">【セット割】キッチン+レンジフード<br>+浴室(¥32,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング" data-price="8800">【セット割】キッチン+<br>レンジフード(¥25,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="水回りクリーニング" data-price="8800">【セット割】水回り5点<br>全部お任せ(¥50,000)</button>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
@@ -1037,32 +1041,18 @@
             <div class="irradiations">
                 <button type="button" id="firstirradiations" onclick="selectirradiations(this)"
                     data-price="4400">食洗機(¥4,400)</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)"
-                    data-price="4400">お魚グリル(¥4,400)</button>
                 <button type="button" id="sanirradiations" onclick="selectirradiations(this)"
                     data-price="3300">電子レンジ(¥3,300)</button>
-                <button type="button" id="yonirradiations" onclick="selectirradiations(this)"
-                    data-price="5500">排水管高圧洗浄（キッチン）(¥5,500)</button>
-                <button type="button" id="goirradiations" onclick="selectirradiations(this)"
-                    data-price="5500">内部パーツ分解洗浄（レンジフード）(¥5,500)</button>
                 <button type="button" id="rokuirradiations" onclick="selectirradiations(this)"
-                    data-price="5500">浴室換気扇分解洗浄(¥5,500)</button>
+                    data-price="5500">換気扇分解洗浄(浴室)(¥5,500)</button>
                 <button type="button" id="sitiirradiations" onclick="selectirradiations(this)"
                     data-price="3500">エプロン内高圧洗浄（浴室）(¥3,500)</button>
-                <button type="button" id="hatiirradiations" onclick="selectirradiations(this)"
-                    data-price="5500">鏡の鱗取り(¥5,500)</button>
-                <button type="button" id="firstirradiations" onclick="selectirradiations(this)"
-                    data-price="5500">カビ防止コート（浴室）(¥5,500)</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)"
-                    data-price="5500">排水管高圧洗浄（浴室）(¥5,500)</button>
                 <button type="button" id="sanirradiations" onclick="selectirradiations(this)"
                     data-price="8800">風呂釜洗浄(¥8,800)</button>
                 <button type="button" id="yonirradiations" onclick="selectirradiations(this)"
-                    data-price="2200">イス・フタ・桶洗浄(¥2,200)</button>
+                    data-price="2200">換気扇分解洗浄(洗面所)(¥3,300)</button>
                 <button type="button" id="goirradiations" onclick="selectirradiations(this)"
-                    data-price="5500">ブラインド（浴室）(¥5,500)</button>
-                <button type="button" id="rokuirradiations" onclick="selectirradiations(this)"
-                    data-price="4400">トイレタンク洗浄(¥4,400)</button>
+                    data-price="5500">換気扇分解洗浄(浴室,洗面,トイレ:3点セット割)(¥9,900)</button>
                 <button type="button" id="sitiirradiations" onclick="selectirradiations(this)"
                     data-price="3300">換気扇の分解洗浄（トイレ）(¥3,300)</button>
             </div>
@@ -1093,7 +1083,44 @@
                 <button type="button" id="repeatirradiations" onclick="selectirradiations(this)"
                     data-price="15000">排水管高圧洗浄(5,500)</button>
                 <button type="button" id="sanirradiations" onclick="selectirradiations(this)"
-                    data-price="15000">洗濯パン(¥3,300)</button>
+                    data-price="15000">洗濯機容量8kg以上(縦型)(¥5,500)</button>
+            </div>
+        </div>
+
+        <div id="outimarugoto" class="menu-section">
+            <div class="highlight-background">
+                <span class="highlight-text">◆おうち丸ごとクリーニング◆</span>
+            </div>
+            <div class="symptoms">
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">アパート,マンション(1R,1K)(¥19,800)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">アパート,マンション(1DK)(¥27,500)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">アパート,マンション(1LDK,2K)(¥33,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">アパート,マンション(2DK)(¥39,600)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">アパート,マンション(2LDK)(¥44,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">アパート,マンション(3DK)(¥50,600)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">アパート,マンション(3LDK)(¥55,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">アパート,マンション(4DK)(¥66,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">アパート,マンション(4LDK)(¥77,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">アパート,マンション(5LDK以上)(要見積もり)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">戸建て清掃(1LDK)(¥47,500)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">戸建て清掃(2DK)(¥44,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">戸建て清掃(2LDK)(¥51,700)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">戸建て清掃(3DK)(¥58,300)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">戸建て清掃(3LDK)(¥66,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">戸建て清掃(4DK)(¥77,000)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">戸建て清掃(4LDK)(¥84,700)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="おうち丸ごとクリーニング" data-price="15000">戸建て清掃(5LDK)(要見積もり)</button>
+            </div>
+            <div class="highlight-background">
+                <span class="highlight-text">オプション</span>
+            </div>
+            <div class="irradiations">
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">エアコン分解洗浄ノーマル(¥8,800)</button>
+                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">お掃除機能付き(¥16,500)</button>
+                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">天井埋め込み式(¥22,000)</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">ワックス剥離,かけ30平米以下(¥13,200)</button>
+                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">ワックス剥離,かけ30平米以上(要見積もり)</button>
+                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">在室清掃(¥3,300)</button>
             </div>
         </div>
 
